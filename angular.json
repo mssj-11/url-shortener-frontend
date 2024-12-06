@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "proxyConfig": "proxy.conf.json",
             "outputPath": "dist/url-shortener-frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -97,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "42524069-a10c-4701-aa21-decc8b117be7"
   }
 }

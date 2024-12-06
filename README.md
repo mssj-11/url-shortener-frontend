@@ -46,8 +46,18 @@ url-shortener-frontend/
 └── .browserslistrc           # Configuración de soporte de navegadores
 ```
 
+##  Construct project
 
+####    Components
+```bash
+ng g c components/url-shortener
+ng g c components/url-list
+```
 
+####    Service
+```bash
+ng generate service services/url
+```
 
 
 
@@ -62,7 +72,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 To start a local development server, run:
 
 ```bash
-ng serve
+ng serve --o
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
