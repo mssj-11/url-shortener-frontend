@@ -1,4 +1,59 @@
-# UrlShortenerFrontend
+# Url - Shortener Frontend
+
+
+
+#   Structure
+```
+url-shortener-frontend/
+├── e2e/                     # Pruebas end-to-end
+│   ├── src/
+│   ├── protractor.conf.js
+│   └── tsconfig.json
+├── node_modules/            # Dependencias instaladas por npm
+├── src/                     # Código fuente principal
+│   ├── app/                 # Aplicación principal
+│   │   ├── components/      # Componentes individuales
+│   │   │   ├── url-shortener/   # Componente de acortador de URL
+│   │   │   │   ├── url-shortener.component.html
+│   │   │   │   ├── url-shortener.component.ts
+│   │   │   │   ├── url-shortener.component.css
+│   │   │   ├── url-list/        # Componente de lista de URLs
+│   │   │   │   ├── url-list.component.html
+│   │   │   │   ├── url-list.component.ts
+│   │   │   │   ├── url-list.component.css
+│   │   ├── services/         # Servicios compartidos
+│   │   │   ├── url.service.ts # Servicio para peticiones HTTP al backend
+│   │   ├── app.component.html # Plantilla principal
+│   │   ├── app.component.ts   # Componente principal
+│   │   ├── app.module.ts      # Módulo principal
+│   │   ├── app-routing.module.ts # Configuración de rutas
+│   ├── assets/               # Archivos estáticos (imágenes, etc.)
+│   │   └── logo.png
+│   ├── environments/         # Configuraciones por entorno
+│   │   ├── environment.ts
+│   │   ├── environment.prod.ts
+│   ├── index.html            # Archivo HTML raíz
+│   ├── main.ts               # Punto de entrada principal
+│   ├── polyfills.ts          # Compatibilidad con navegadores
+│   ├── styles.css            # Estilos globales
+│   └── favicon.ico           # Ícono del sitio
+├── angular.json              # Configuración del proyecto Angular
+├── package.json              # Dependencias y scripts npm
+├── tsconfig.json             # Configuración de TypeScript
+├── proxy.conf.json           # Archivo de proxy para evitar problemas de CORS
+├── README.md                 # Documentación del proyecto
+├── karma.conf.js             # Configuración de Karma para pruebas unitarias
+└── .browserslistrc           # Configuración de soporte de navegadores
+```
+
+
+
+
+
+
+
+
+
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
 
