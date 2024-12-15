@@ -1,0 +1,44 @@
+<div class="main-container">
+  <div class="card">
+    <h1 class="title">Acortador de URLs</h1>
+
+    <div class="form-container">
+      <!-- Formulario -->
+      <form (ngSubmit)="shortenUrl()">
+        <div class="form-group">
+          <label for="originalUrl">URL Original:</label>
+          <input
+            id="originalUrl"
+            type="url"
+            [(ngModel)]="originalUrl"
+            name="originalUrl"
+            placeholder="Ingrese la URL a acortar"
+            required
+          />
+          <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary" [disabled]="loading">
+            Acortar URL
+          </button>
+          <button type="button" class="btn btn-secondary btn-clean" (click)="clearFields()">
+            Limpiar
+          </button>
+        </div>
+
+        <div *ngIf="loading" class="spinner"></div>
+      </form>
+    </div>
+
+    <!-- Resultado -->
+    <div *ngIf="shortenedUrl" class="result-container">
+      <h2>URL Acortada:</h2>
+      <div class="result">
+        <a [href]="shortenedUrl" target="_blank">{{ shortenedUrl }}</a>
+        <button class="btn btn-secondary" (click)="copyToClipboard()">Copiar</button>
+      </div>
+      <p *ngIf="copyMessage" class="success-message">{{ copyMessage }}</p>
+    </div>
+  </div>
+</div>
